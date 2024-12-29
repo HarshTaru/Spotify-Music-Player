@@ -1,0 +1,296 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    /* background-color: black; */
+    background-image: url('assets/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif ;
+}
+
+#logo{
+    grid-area: logo;
+    height: 35px;
+    width: 35px;
+    position:fixed;
+    top: 20px;
+    left: 20px;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    height: 10vh;
+    width: 100vw;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr ;
+    grid-template-areas: 'logo search nav';
+    
+    padding:10px;
+    /* background-color: black; */
+    font-size: 1.2rem;
+    
+}
+#search{
+    grid-area: search;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    /* padding:10px; */
+    border-radius: 10px;
+    width: 97%;
+    height: 60%;
+    /* margin:10px; */
+    border:1px solid white;
+    /* background: linear-gradient(to right, rgba(255, 255, 255, 0.127), rgba(255, 255, 255, 0.223)); */
+
+}
+#search-box::placeholder {
+    color: white; /* Placeholder text color */
+    opacity: 1; /* Ensure the placeholder is fully visible */
+}
+#search-box{
+    background-color: transparent;
+    color:white;
+    accent-color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none; /* Removes the border */
+    box-shadow: none; /* Removes the raised effect (shadow) */
+    outline: none; /* Removes the focus outline */
+    /* padding: 0.5rem; Optional: Adds some padding for better spacing */
+
+}
+#search img{
+    height: 20px;
+    width: 20px;
+}
+#nav{
+    grid-area: nav;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 10px 25px;
+
+}
+#nav img{
+    height: 20px;
+    width: 20px;
+}
+#nav ul {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+}
+#nav ul li{
+    font-size: 1rem;
+    font-weight: 100;
+}
+#nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main{
+    position: fixed;
+    top: 10vh;
+    height: 70vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 2fr ;
+    grid-template-areas: 'aside main';
+    /* background-color: black; */
+}
+
+#aside-tracks{
+    grid-area: aside;
+    border-radius: 10px;
+    margin:10px 0px 10px 10px;
+    border: 1px solid white;
+
+    /* background: linear-gradient(to right, rgba(255, 255, 255, 0.127), rgba(1, 1, 1, 0.223)); */
+    padding:10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    /* overflow-y: scroll; */
+}
+
+#aside-tracks ul{
+    color: white;
+    display:flex;
+    flex-direction: column;
+    justify-content: start;
+    gap:10px;
+}
+#aside-tracks ul div{
+    border-radius: 10px;
+
+}
+#aside-tracks ul li{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap:0px;
+    /* margin:10px 0px; */
+    height: 40px;
+    font-size: 1rem;
+
+}
+#aside-tracks ul div{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap:10px;
+    /* border-bottom: 1px solid white; */
+}
+#aside-tracks ul div img{
+    height: 35px;
+    width: 35px;
+}
+#main{
+    height: 100%;
+    margin:10px;
+    border-radius: 10px;
+    padding:10px;
+    /* background: linear-gradient(to bottom, rgba(255, 255, 255, 0.127), rgba(255, 255, 255, 0.223)); */
+
+
+}
+#content{
+    /* margin:10px; */
+    color: white;
+    border-radius: 10px;
+    /* padding:10px; */
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-items: start;
+    justify-content: start;
+    height: 25%;
+
+}
+
+#queue{
+    margin:10px 10px 10px 0px;
+    /* background-color: rgba(255, 255, 255, 0.127); */
+    /* background: linear-gradient(to bottom, rgba(255, 255, 255, 0.127), rgba(255, 255, 255, 0.223)); */
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding:10px;
+    grid-area: queue;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: start;
+    height: 100%;
+
+}
+#play{
+    height: 25px;
+    width: 25px;
+    margin: 10px 25px;
+    opacity: 0;
+}
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:20px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 1rem;
+    border:1px solid white;
+
+    /* background: linear-gradient(to left, rgb(81, 81, 81), rgba(158, 102, 102, 0.223)); */
+}
+
+.card img{
+    height: 25%;
+    width: 25%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    height: 10vh;
+    width: 100vw;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-areas: "songdetails mainplayer";
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    padding: 10px 25px;
+    gap: 10px;
+    border-top: 1px solid white; /* Changed to border-top for better visual */
+}
+#main-player {
+    grid-area: mainplayer;
+    display: flex;
+    flex-direction: column;
+    /* width: 100%; Full width of the footer */
+    align-items: center;
+    justify-content:start;
+    gap: 5px;
+}
+
+#songdetails {
+    grid-area: songdetails;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align details to the left */
+    gap: 15px;
+    /* width: 30%; */
+}
+
+#songdetails img {
+    height: 50px; /* Fixed height for consistency */
+    width: 50px;  /* Fixed width matching the height */
+    object-fit: cover; /* Maintain aspect ratio of the image */
+}
+
+#player {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 80%; 
+}
+
+#music-progress {
+    margin: 10px 0;
+    height: 5px; /* Slightly thicker for better visibility */
+    width: 100%; /* Full width of the player container */
+    accent-color: white; /* Matches the footer theme */
+    border-radius: 5px; /* Smooth edges for the slider */
+}
+
+#music-controls {
+    display: flex;
+    gap: 20px; /* More space between control buttons */
+    align-items: center;
+    justify-content: center;
+    /* width: 90%; Full width */
+}
+
+#music-controls img {
+    height: 25px; /* Slightly larger for visibility */
+    width: 25px;
+    cursor: pointer; /* Add pointer cursor for clickable controls */
+}

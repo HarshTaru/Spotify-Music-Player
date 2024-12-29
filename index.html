@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify</title>
+    <link rel="icon" href="assets/spotify.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img id="logo" src="assets/spotify.svg" alt="Spotify Logo" />
+      <div id="search">
+        <img src="assets/magnifying-glass-solid.svg" />
+        <input
+          id="search-box"
+          placeholder="What do you want to play?"
+          type="text"
+        />
+      </div>
+      <nav id="nav">
+        <ul>
+          <!-- <li><a href="#">Home</a></li> -->
+          <!-- <li><a href="#">Search</a></li> -->
+          <li><a href="#">Your Library</a></li>
+          <li><a href="#">Premium</a></li>
+        </ul>
+        <img src="assets/bell-regular.svg" />
+      </nav>
+    </header>
+    <main>
+      <aside id="aside-tracks">
+        <h4>Your Library</h4>
+        <ul>
+          <div>
+            <img src="assets/cover1.jpeg" />
+            <li>Playlist1</li>
+            <!-- <img src="assets/play-solid.svg" /> -->
+          </div>
+          <div>
+            <img src="assets/cover1.jpeg" />
+
+            <li>Playlist2</li>
+            <!-- <img src="assets/play-solid.svg" /> -->
+          </div>
+          <div>
+            <img src="assets/cover3.jpeg" />
+
+            <li>Playlist3</li>
+            <!-- <img src="assets/play-solid.svg" /> -->
+          </div>
+        </ul>
+      </aside>
+      <div id="main">
+        <div id="content">
+          <div id="card1" class="card">
+            <img src="assets/cover1.jpeg" />
+            <p>Track 1</p>
+            <img id="play" src="assets/play-solid.svg" />
+          </div>
+          <div id="card2" class="card">
+            <img src="assets/cover2.jpeg" />
+            <p>Track 1</p>
+            <img id="play" src="assets/play-solid.svg" />
+
+          </div>
+          <div id="card3" class="card">
+            <img src="assets/cover3.jpeg" />
+            <p>Track 2</p>
+            <img id="play" src="assets/play-solid.svg" />
+
+          </div>
+          <div id="card4" class="card">
+            <img src="assets/cover1.jpeg" />
+            <p>Track 4</p>
+            <img id="play"src="assets/play-solid.svg" />
+          </div>
+        </div>
+        <div id="moresongs"></div>
+      </div>
+      <!-- <div id="queue">
+        <h4>Queue</h4>
+        <div id="nowplaying"></div>
+        <h4>Now Playing</h4>
+        <h4>Next Up</h4>
+      </div> -->
+    </main>
+    <footer>
+      
+      <div id="songdetails">
+        <img>
+        <p></p>
+      </div>
+      <div id="main-player">
+        <div id="music-controls">
+          <img id="back" src="assets/backward-step-solid.svg" />
+          <img id = 'playbtn' src="assets/play-solid.svg" />
+          <img id="forward" src="assets/forward-step-solid.svg" />
+        </div>
+        <div id = "player">
+          <span id="current-time"">--/--</span>
+          <input type="range" name="player" id="music-progress" />
+          <span id="duration">--/--</span>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
